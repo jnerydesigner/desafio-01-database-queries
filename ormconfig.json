@@ -1,14 +1,18 @@
 {
+  "name": "default",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5433,
   "username": "postgres",
   "password": "docker",
-
-  "type": "postgres",
-  "name": "default",
-  "host": "localhost",
-  "port": 5432,
-  "database": "queries_challenge",
-  "entities": ["./src/modules/**/entities/*.ts"],
-  "migrations": ["./src/database/migrations/*.ts"],
+  "database": "database_query_challenge",
+  "entities": [
+    "./src/modules/games/entities/*.ts",
+    "./src/modules/users/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
   "cli": {
     "migrationsDir": "./src/database/migrations"
   }
